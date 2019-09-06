@@ -20,8 +20,8 @@ printf("data.f=%f\n",data.f);
 strcpy(data.str, "tanksu");
 printf("data.str=%s\n", data.str);
 
-	//如果直接全部赋值，那么里面的值就有损坏
-	//如下代码
+//如果直接全部赋值，那么里面的值就有损坏
+//如下代码
 /**
  * data.i = 10;
    data.f = 220.5;
