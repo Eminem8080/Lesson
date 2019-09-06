@@ -9,11 +9,9 @@ void unitTest(){
         float f;
         char str[20];
     };
-    union Data data;
-    data.i = 10;
-    printf("data.i=%d\n", data.i);
-
-
+union Data data;
+data.i = 10;
+printf("data.i=%d\n", data.i);
 data.f = 225.6;
 printf("data.f=%f\n",data.f);
 
