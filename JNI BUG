@@ -1,1 +1,15 @@
-	
+#### 1. error: cannot jump from this goto statement to its label	
+
+把所有的定义都放到第一个goto之前。
+
+```c
+jclass jcls = NULL;
+jmethodID jSm = NULL;
+jmethodID jm = NULL;
+jcls = env->GetObjectClass(job);
+if (jcls == NULL) {
+    LOGI("findClass error....");
+    goto error;
+}
+```
+
