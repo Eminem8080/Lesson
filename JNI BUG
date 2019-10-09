@@ -13,3 +13,12 @@ if (jcls == NULL) {
 }
 ```
 
+
+
+#### **2.为什么从const char*类型向char*赋值会报错，而从const char向char赋值就没问题？**
+
+1. **const char\*的含义并非是指针不可被修改，而是指针指向的内容不可被修改，因此，当把一个const char\*赋给一个char\*，结果就导致原来加那个const的目的形同虚设，一点意义也没有了。**
+   而把一个const char赋给一个char就不存在这个问题，因为基本类型的“赋值”，显然也就是拷贝一个值而已，拷贝之后，不管你对后面的那个char怎么修改，都不会影响原先那个const char，所以这里边本来就不存在什么矛盾的地方。
+2. **c标准规定，指针间的赋值，左值必须包含右值的所有限定词。把const char\*赋值给char\*，作为左值的char\*并没有包含作为右值的const char\*的限定词const，因此非法。**
+3. char   const   *str   和   const   char   *str是一样的，都是内容不可变，指针可变。
+   char*   const   str才是指针不可变，内容可变。
