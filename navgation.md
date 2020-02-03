@@ -2,4 +2,4 @@
 
 2.使用BottomNavigationView配合FragmentContainerView标签（google demo）注意 menu中所有的item都必须和navigation中的xml导航图的名称保持一致。
 
-3.navigation现在切换都是replace(),所以fragment的状态无法保存，暂时等google出解决方案
+3.navigation现在切换都是replace(),所以fragment的状态无法保存，暂时等google出解决方案(详见navigation issue 530)
