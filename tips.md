@@ -58,4 +58,6 @@ The ColorDrawable's state stores alpha, so any changes to one will change the ot
 
 In the example, this would result in using `test1.getBackground().mutate().setAlpha(80);` instead of directly applying the alpha.----引用自stackoverflow
 
+https://stackoverflow.com/questions/33354788/color-drawable-changes-are-applied-to-all-views-with-the-same-background-color
+
 使用mute方法先进行拷贝在进行修改
