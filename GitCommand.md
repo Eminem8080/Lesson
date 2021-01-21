@@ -122,3 +122,15 @@ git config --global core.excludesfile igniore文件绝对路径 .gitignore_globa
 git config -l //查看配置是否成功
 ```
 
+# 查看rsa密钥
+
+```
+ cat ~/.ssh/id_rsa.pub
+```
+
+如果不存在则生成公钥
+
+```
+ ssh-keygen
+```
+
