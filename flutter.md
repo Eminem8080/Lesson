@@ -24,3 +24,36 @@ I/flutter (31839): The following assertion was thrown during performLayout():
 I/flutter (31839): BoxConstraints forces an infinite width.
 ```
 
+
+
+#### 2.ListView没有和AppBar一起使用时，顶部空白
+
+**ListView头部有一段空白区域，是因为当ListView没有和AppBar一起使用时，头部会有一个padding，为了去掉padding，可以使用MediaQuery.removePadding:**
+
+```dart
+Widget _rubbishList(){
+    return MediaQuery.removePadding(
+        removeTop: true,
+        context:  context,
+        child: Container(
+            margin: EdgeInsets.only(left: 20,right: 20),
+            height: ScreenUtil().setHeight(700),
+            child: ListView.builder(
+                itemCount: rubbishList.length,
+                itemBuilder: (context,index){
+                  return _cardItem(index);
+                }
+            )
+        )
+    );
+
+  }
+```
+
+
+
+#### 3.[flutter中如何监听键盘弹出关闭](https://segmentfault.com/a/1190000022495736)
+
+#### WidgetsBindingObserver & didChangeMetrics
+
+这个组件可以监听页面的一些生命周期，并且其中有一个回调didChangeMetrics可以监听界面高度的变化。其中键盘的弹出和收起这些其实都属于高度的变化自然也是可以监听到的。
