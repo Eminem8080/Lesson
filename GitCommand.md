@@ -22,6 +22,11 @@
 git fetch
 ```
 
+git fatal: 拒绝合并无关的历史
+```
+git pull origin master --allow-unrelated-histories  ////本地初始化的项目 与 github 版本不一致, 导致无法提交
+```
+
 拉取远程分支
 
 ```
