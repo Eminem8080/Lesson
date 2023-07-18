@@ -16,14 +16,6 @@
   
   ```
 
-  git fatal: 拒绝合并无关的历史
-
-  
-  ```
-  //本地初始化的项目 与 github 版本不一致, 导致无法提交
-git pull origin master --allow-unrelated-histories 
-```
-
  更新本地分支
 
 ```
